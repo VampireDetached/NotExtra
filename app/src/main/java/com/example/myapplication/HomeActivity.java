@@ -204,6 +204,12 @@ public class HomeActivity extends AppCompatActivity {
                                 String responseStr = scanner.hasNext() ? scanner.next() : "";
                                 JSONObject jsonObject = new JSONObject(responseStr);
 
+                                SharedPreferences sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("user_id","0");
+                                editor.putString("auth_id","");
+                                editor.apply();
+
 
                                 Intent intent = new Intent(HomeActivity.this, WelcomeActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

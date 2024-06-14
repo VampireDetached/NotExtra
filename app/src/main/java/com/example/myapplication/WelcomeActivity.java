@@ -31,6 +31,13 @@ public class WelcomeActivity extends AppCompatActivity {
         }
         editor.apply();
 
+        String user_id = sharedPreferences.getString("user_id", "0");
+        String auth_id = sharedPreferences.getString("auth_id", "");
+        if(!user_id.equals("0"))
+        {
+            Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void onSignUpViewClick(View view) {
