@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textColor="@color/blue"-->
+<!--            android:text="NotExtra"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp">
+
+        <Button
+            android:id="@+id/sign_up_view"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="注册"
+            android:textSize="18dp"
+            android:onClick="onSignUpViewClick"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_blue"
+            android:textColor="@android:color/white"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/log_in_view"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="登录"
+            android:textSize="18dp"
+            android:onClick="onLogInViewClick"
+            android:background="@drawable/button_gray"
+            android:textColor="@color/blue"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/ai_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入内容"
+        android:minHeight="20dp"/>
+
+    <ScrollView
+        android:id="@+id/ai_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ai_input">
+
+        <TextView
+            android:id="@+id/ai_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ai_scroll">
+        <!-- 按钮 -->
+        <Button
+            android:id="@+id/ai_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_blue"
+            android:text="发送"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/ai_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_gray"
+            android:text="完成"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="18"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TextView for "1" -->
+    <TextView
+        android:id="@+id/note_tags_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="当前笔记标签"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- First LinearLayout -->
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/note_tags_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/note_tags_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:flexWrap="wrap"/>
+
+    <!-- TextView for "2" -->
+    <TextView
+        android:id="@+id/user_tags_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="从以下标签中选择"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/note_tags_container"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/new_user_tag_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="新建标签"
+        android:onClick="onNewUserTagClick"
+        android:background="@drawable/button_gray"
+        app:layout_constraintBottom_toTopOf="@id/user_tags_container"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Second LinearLayout -->
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/user_tags_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/user_tags_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:flexWrap="wrap"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+</LinearLayout>
